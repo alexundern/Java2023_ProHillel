@@ -1,8 +1,6 @@
-import java.util.List;
-
 public interface SubscriberService {
 
-    void subscribersWithExcessiveCityCallDuration(int duration);
+    void subscribersWithExcessiveCityCallDuration(double duration);
     void subscribersWithInterCityCalls();
     void subscribersByLastName(String lastName);
     void totalInternetTrafficForCity(String city);
