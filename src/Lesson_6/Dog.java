@@ -1,3 +1,5 @@
+package Lesson_6;
+
 public class Dog extends Animal{
     private static int dogCount = 0;
     private static final int maxRunDistance = 500;

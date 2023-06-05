@@ -1,3 +1,5 @@
+package Lesson_6;
+
 public class Animal {
     private static int animalCount = 0;
 

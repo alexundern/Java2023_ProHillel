@@ -1,8 +1,10 @@
+package Lesson_7;
+
 public class SubGeneration {
 
     public static Subscriber[]generateSubArray() {
 
-        Subscriber [] array = new Subscriber[7];
+        Subscriber[] array = new Subscriber[7];
 
         array [0] = new Subscriber(125, "Pushkin",
                 "Oleksander", "New Jersey", "+380950000001",

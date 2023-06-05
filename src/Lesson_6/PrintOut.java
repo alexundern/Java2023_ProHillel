@@ -1,3 +1,5 @@
+package Lesson_6;
+
 import java.util.Scanner;
 
 public class PrintOut {

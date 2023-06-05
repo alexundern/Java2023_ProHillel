@@ -1,3 +1,5 @@
+package Lesson_7;
+
 public interface SubscriberService {
 
     void subscribersWithExcessiveCityCallDuration(double duration);

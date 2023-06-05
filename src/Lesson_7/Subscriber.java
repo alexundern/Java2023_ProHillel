@@ -1,3 +1,5 @@
+package Lesson_7;
+
 public class Subscriber {
 
     private int id;

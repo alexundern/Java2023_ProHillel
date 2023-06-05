@@ -1,3 +1,5 @@
+package Lesson_6;
+
 public class Cat extends Animal {
     private static int catCount = 0;
     private static final int maxRunDistance = 500;
