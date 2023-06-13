@@ -1,4 +1,4 @@
-package lesson_6;
+package lesson_5_hw_6;
 
 public class Animal {
     private static int animalCount = 0;

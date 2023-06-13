@@ -1,4 +1,4 @@
-package lesson_8;
+package lesson_7_hw_8;
 
 public class Main {
     public static void main(String[] args) {

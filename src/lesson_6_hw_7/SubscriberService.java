@@ -1,4 +1,4 @@
-package lesson_7;
+package lesson_6_hw_7;
 
 public interface SubscriberService {
 

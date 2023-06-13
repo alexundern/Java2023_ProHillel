@@ -1,4 +1,4 @@
-package lesson_9__Hw_10.part_2;
+package lesson_9__hw_10.part_2;
 
 public class Entry {
 

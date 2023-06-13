@@ -1,4 +1,4 @@
-package lesson_6;
+package lesson_5_hw_6;
 
 public class Dog extends Animal{
     private static int dogCount = 0;

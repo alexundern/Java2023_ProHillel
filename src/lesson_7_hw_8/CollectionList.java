@@ -1,4 +1,4 @@
-package lesson_8;
+package lesson_7_hw_8;
 import java.util.ArrayList;
 import java.util.List;
 
