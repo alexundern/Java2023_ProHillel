@@ -1,6 +1,6 @@
-package lesson_10.Hw_13;
+package lesson_10.hw_13;
 
-import lesson_10.Hw_13.coffee.order.CoffeeOrderBoard;
+import lesson_10.hw_13.coffee.order.CoffeeOrderBoard;
 
 public class Main {
     public static void main(String[] args) {

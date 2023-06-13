@@ -1,4 +1,4 @@
-package lesson_10.Hw_13.coffee.order;
+package lesson_10.hw_13.coffee.order;
 
 public class Order {
 

@@ -1,4 +1,4 @@
-package lesson_9__Hw_10.Part_1;
+package lesson_9__Hw_10.part_1;
 
 import java.util.*;
 

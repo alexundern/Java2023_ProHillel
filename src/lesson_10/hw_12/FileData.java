@@ -1,6 +1,4 @@
-package lesson_10.Hw_12;
-
-import java.util.*;
+package lesson_10.hw_12;
 
 public class FileData {
 

@@ -1,4 +1,4 @@
-package lesson_10.Hw_12;
+package lesson_10.hw_12;
 
 public class Main {
 
