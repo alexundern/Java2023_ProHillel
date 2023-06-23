@@ -1,5 +1,7 @@
 package lesson_12.hw_15;
 
+import java.util.stream.*;
+
 public class HomeWorkApp {
 
     public static void main(String[] args) {
@@ -10,7 +12,7 @@ public class HomeWorkApp {
 
         int number1 = 5;
         int number2 = 15;
-        boolean result = isSumInRange(number1, number2);
+        boolean result = sumInRange(number1, number2);
         System.out.println("Is sum in range: " + result);
 
         int number = -10;
@@ -20,12 +22,12 @@ public class HomeWorkApp {
         boolean isNegative = isNegativeNumber(negativeNumber);
         System.out.println("Is negative number: " + isNegative);
 
-        String text = "Hello";
-        int count = 3;
+        String text = "Text Multiple Times";
+        int count = 5;
         printTextMultipleTimes(text, count);
 
         int year = 2024;
-        boolean isLeapYear = isLeapYear(year);
+        boolean isLeapYear = leapYear(year);
         System.out.println("Is leap year: " + isLeapYear);
     }
 
@@ -39,66 +41,47 @@ public class HomeWorkApp {
         int a = 5;
         int b = -3;
         int sum = a + b;
-        if (sum >= 0) {
-            System.out.println("Сума позитивна");
-        } else {
-            System.out.println("Сума негативна");
-        }
+        String result = sum >= 0 ? "The sum is positive" : "The sum is negative";
+        System.out.println(result);
     }
 
     public static void printColor() {
-        int value = 75;
-        if (value <= 0) {
-            System.out.println("Червоний");
-        } else if (value <= 100) {
-            System.out.println("Жовтий");
-        } else {
-            System.out.println("Зелений");
-        }
+        int value = 175;
+        String color = value <= 0 ? "Red" : value <= 100 ? "Yellow" : "Green";
+        System.out.println(color);
     }
 
     public static void compareNumbers() {
         int a = 10;
-        int b = 5;
-        if (a >= b) {
-            System.out.println("a >= b");
-        } else {
-            System.out.println("a < b");
-        }
+        int b = 25;
+        String result = a >= b ? "a >= b" : "a < b";
+        System.out.println(result);
     }
 
-    public static boolean isSumInRange(int a, int b) {
+    public static boolean sumInRange(int a, int b) {
         int sum = a + b;
-        return sum >= 10 && sum <= 20;
+        return IntStream.rangeClosed(10, 20).anyMatch(i -> i == sum);
     }
 
     public static void printPositiveOrNegative(int number) {
-        if (number >= 0) {
-            System.out.println("Додатнє число");
-        } else {
-            System.out.println("Від'ємне число");
-        }
+        String result = number >= 0 ? "A positive number" : "A negative number";
+        System.out.println(result);
     }
 
     public static boolean isNegativeNumber(int number) {
-        return number < 0;
+        return IntStream.of(number).anyMatch(n -> n < 0);
     }
 
     public static void printTextMultipleTimes(String text, int count) {
-        for (int i = 0; i < count; i++) {
-            System.out.println(text);
-        }
+        Stream.generate(() -> text).limit(count).forEach(System.out::println);
     }
 
-    public static boolean isLeapYear(int year) {
-        if (year % 4 != 0) {
-            return false;
-        } else if (year % 100 != 0) {
-            return true;
-        } else if (year % 400 != 0) {
-            return false;
-        } else {
-            return true;
-        }
+    public static boolean leapYear(int year) {
+        return Stream.of(year)
+                .filter(y -> y % 4 == 0)
+                .filter(y -> y % 100 != 0)
+                .filter(y -> y % 400 == 0)
+                .findAny()
+                .isPresent();
     }
 }
