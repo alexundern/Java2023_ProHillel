@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/hillelJava_2023.iml" filepath="$PROJECT_DIR$/hillelJava_2023.iml" />
-      <module fileurl="file://$PROJECT_DIR$/homeWork_5/homeWork_5.iml" filepath="$PROJECT_DIR$/homeWork_5/homeWork_5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/otherProd/homeWork_5/homeWork_5.iml" filepath="$PROJECT_DIR$/src/otherProd/homeWork_5/homeWork_5.iml" />
       <module fileurl="file://$PROJECT_DIR$/homeWork_6/homeWork_6.iml" filepath="$PROJECT_DIR$/homeWork_6/homeWork_6.iml" />
       <module fileurl="file://$PROJECT_DIR$/homeWork_7/homeWork_7.iml" filepath="$PROJECT_DIR$/homeWork_7/homeWork_7.iml" />
     </modules>

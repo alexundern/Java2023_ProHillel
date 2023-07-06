@@ -51,24 +51,19 @@ public class Main {
             GameResult gameResult = gameService.play(playerMove);
 
             System.out.println("_________________________________");
-            System.out.println("Player chose: " + gameResult.getPlayerMove());
-            System.out.println("Computer chose: " + gameResult.getComputerMove());
-            System.out.println("Result: " + getResultString(gameResult.getResult()));
+            System.out.println("Player chose: " + gameResult.playerMove());
+            System.out.println("Computer chose: " + gameResult.computerMove());
+            System.out.println("Result: " + getResultString(gameResult.result()));
         }
 
         gameService.printStatistics();
     }
 
     private static String getResultString(Player result) {
-        switch (result) {
-            case PLAYER:
-                return "PLAYER";
-            case COMPUTER:
-                return "COMPUTER";
-            case DRAW:
-                return "DRAW";
-            default:
-                return "";
-        }
+        return switch (result) {
+            case PLAYER -> "PLAYER";
+            case COMPUTER -> "COMPUTER";
+            case DRAW -> "DRAW";
+        };
     }
 }

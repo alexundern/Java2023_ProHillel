@@ -4,21 +4,15 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/maven/hw_19/pom.xml" />
         <option value="$PROJECT_DIR$/maven/hw_18/pom.xml" />
         <option value="$PROJECT_DIR$/maven/hw_17/pom.xml" />
-        <option value="$PROJECT_DIR$/maven/testFolder/pom.xml" />
-        <option value="$PROJECT_DIR$/maven/hw_20/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/hw_19/pom.xml" />
         <option value="$PROJECT_DIR$/maven/hw_21/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/testFolder/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/maven/hw_20/pom.xml" />
-      </set>
-    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
