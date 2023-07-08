@@ -1,9 +1,10 @@
-package com.hillel.service;
+package hillel.service;
 
-import com.hillel.innitial.Computer;
-import com.hillel.innitial.GameResult;
-import com.hillel.innitial.Move;
-import com.hillel.innitial.Player;
+import hillel.innitial.Computer;
+import hillel.innitial.GameResult;
+import hillel.innitial.Move;
+import hillel.innitial.Player;
+
 
 public class GameService {
     private final Computer computer;
@@ -13,14 +14,6 @@ public class GameService {
     private int draws;
     private GameService gameService;
 
-    public GameService(String computerName) {
-        this.computer = new Computer(computerName);
-        this.totalGames = 0;
-        this.playerWins = 0;
-        this.computerWins = 0;
-        this.draws = 0;
-    }
-
     public GameService getGameService() {
         return this.gameService;
     }
@@ -29,11 +22,19 @@ public class GameService {
         this.gameService = gameService;
     }
 
-    String[][] resultMatrix = {
+    private static final String[][] RESULT_MATRIX = {
             {"DRAW", "PLAYER", "COMPUTER"},
             {"COMPUTER", "DRAW", "PLAYER"},
             {"PLAYER", "COMPUTER", "DRAW"}
     };
+
+    public GameService(String computerName) {
+        this.computer = new Computer(computerName);
+        this.totalGames = 0;
+        this.playerWins = 0;
+        this.computerWins = 0;
+        this.draws = 0;
+    }
 
     public GameResult play(Move playerMove) {
         Move computerMove = computer.makeMove();
@@ -53,7 +54,7 @@ public class GameService {
     public Player determineResult(Move playerMove, Move computerMove) {
         int playerIndex = getIndex(playerMove);
         int computerIndex = getIndex(computerMove);
-        return Player.valueOf(resultMatrix[computerIndex][playerIndex]);
+        return Player.valueOf(RESULT_MATRIX[computerIndex][playerIndex]);
     }
 
     public int getIndex(Move move) {
@@ -72,5 +73,8 @@ public class GameService {
             case COMPUTER -> computerWins++;
             case DRAW -> draws++;
         }
+    }
+
+    public void setComputer(Computer computer) {
     }
 }

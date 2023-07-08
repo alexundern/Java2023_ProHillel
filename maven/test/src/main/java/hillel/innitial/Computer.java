@@ -1,4 +1,4 @@
-package com.hillel.innitial;
+package hillel.innitial;
 
 import java.util.Random;
 
