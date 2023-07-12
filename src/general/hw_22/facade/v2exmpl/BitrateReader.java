@@ -1,4 +1,4 @@
-package general.hw_22.facade.v2;
+package general.hw_22.facade.v2exmpl;
 
 public class BitrateReader {
     public static VideoFile read(VideoFile file, Codec codec) {

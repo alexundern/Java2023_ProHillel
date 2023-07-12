@@ -1,4 +1,4 @@
-package general.hw_22.facade.v2;
+package general.hw_22.facade.v2exmpl;
 
 public class CodecFactory {
     public static Codec extract(VideoFile file) {
