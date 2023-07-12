@@ -23,6 +23,7 @@ public class Manual {
     public String print() {
         String info = "";
         info += "Type of car: " + carType + "\n";
+        info += "Color: " + color + "\n";
         info += "Count of seats: " + seats + "\n";
         info += "Engine: volume - " + engine.getVolume() + "; mileage - " + engine.getMileage() + "\n";
         info += "Transmission: " + transmission + "\n";
@@ -39,7 +40,4 @@ public class Manual {
         return info;
     }
 
-    public Color getColor() {
-        return color;
-    }
 }

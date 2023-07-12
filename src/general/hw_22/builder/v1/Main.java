@@ -6,7 +6,7 @@ public class Main {
 
         CarBuilder builder = new CarBuilder();
         director.constructSUV(builder);
-        builder.setColor(Color.PURPLE);
+        builder.setColor(Color.BLACK);
         Car car = builder.getResult();
         System.out.println("Car built:\n" + car.getCarType());
         System.out.println("Color: " + car.getColor());
@@ -16,6 +16,5 @@ public class Main {
         manualBuilder.setColor(Color.BLACK);
         Manual carManual = manualBuilder.getResult();
         System.out.println("\nCar manual built:\n" + carManual.print());
-        System.out.println("Color: " + carManual.getColor());
     }
 }
