@@ -1,8 +1,8 @@
 package general.hw_22.strategy;
 
 public class Triangle implements Shape {
-    private double base;
-    private double height;
+    private final double base;
+    private final double height;
 
     public Triangle(double base, double height) {
         this.base = base;

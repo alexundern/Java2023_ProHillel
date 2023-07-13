@@ -4,15 +4,15 @@ public class Main {
     public static void main(String[] args) {
         AreaCalculator calculator = new AreaCalculator();
 
-        Rectangle rectangle = new Rectangle(4, 5);
+        Rectangle rectangle = new Rectangle(6, 2);
         calculator.setShape(rectangle);
         double rectangleArea = calculator.calculateArea();
-        System.out.println("Площадь прямоугольника: " + rectangleArea);
+        System.out.println("The area of a rectangle: " + rectangleArea);
 
-        Triangle triangle = new Triangle(3, 6);
+        Triangle triangle = new Triangle(4, 8);
         calculator.setShape(triangle);
         double triangleArea = calculator.calculateArea();
-        System.out.println("Площадь треугольника: " + triangleArea);
+        System.out.println("The area of a triangle: " + triangleArea);
     }
 }
 
