@@ -68,3 +68,4 @@ replay_pid*
 /.idea/
 
 /out/
+/maven/hw_24/.gitignore
