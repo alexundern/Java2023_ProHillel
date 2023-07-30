@@ -36,10 +36,10 @@ alter table lesson add
 		id
 	);
     
-    alter table schedule add
+alter table schedule add
     constraint FK_schedule_lesson foreign key
     (
-    Id
+        Id
     ) references lesson (
-    id
+        id
     );
