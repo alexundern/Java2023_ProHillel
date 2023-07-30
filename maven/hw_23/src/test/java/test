@@ -1,0 +1,63 @@
+//import com.hillel.JsonYamlConverter;
+//
+//import org.junit.jupiter.api.Assertions;
+//import org.junit.jupiter.api.BeforeEach;
+//import org.junit.jupiter.api.DisplayName;
+//import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.io.TempDir;
+//
+//import java.io.File;
+//import java.io.IOException;
+//import java.nio.file.Files;
+//import java.util.Objects;
+//
+//public class FileConverterTest {
+//
+//    @TempDir
+//    File testDirectory;
+//
+//    @TempDir
+//    File convertedDirectory;
+//
+//    @BeforeEach
+//    public void setUp() {
+//        testDirectory = new File("D:\\Hillel\\hw\\maven\\hw_23\\src\\main\\resources/testFiles");
+//        testDirectory.mkdir();
+//        convertedDirectory = new File("D:\\Hillel\\hw\\maven\\hw_23\\src\\main\\resources/testFiles");
+//        convertedDirectory.mkdir();
+//    }
+//
+//    @DisplayName("Input validation")
+//    @Test
+//    public void testMain_ValidInput_Success() throws IOException {
+//        File jsonFile = new File(testDirectory, "test.json");
+//        File yamlFile = new File(testDirectory, "test.yaml");
+//        Files.write(jsonFile.toPath(), "{\"key\": \"value\"}".getBytes());
+//        Files.write(yamlFile.toPath(), "key: value".getBytes());
+//
+//        System.out.println("Executing JsonYamlConverter.main()...");
+//        JsonYamlConverter.main(new String[]{testDirectory.getAbsolutePath()});
+//
+//        System.out.println("Test Directory Contents:");
+//        for (File file : Objects.requireNonNull(testDirectory.listFiles())) {
+//            System.out.println(file.getName());
+//        }
+//
+//        System.out.println("Converted Directory Contents:");
+//        for (File file : Objects.requireNonNull(convertedDirectory.listFiles())) {
+//            System.out.println(file.getName());
+//        }
+//
+//        File convertedJsonFile = new File(convertedDirectory.getAbsolutePath(), "test.json");
+//        File convertedYamlFile = new File(convertedDirectory.getAbsolutePath(), "test.yaml");
+//
+//        Assertions.assertTrue(convertedJsonFile.exists(), "Converted JSON file does not exist: "
+//                + convertedJsonFile.getAbsolutePath());
+//        Assertions.assertTrue(convertedYamlFile.exists(), "Converted YAML file does not exist: "
+//                + convertedYamlFile.getAbsolutePath());
+//
+//        for (File file : Objects.requireNonNull(convertedDirectory.listFiles())) {
+//            file.delete();
+//        }
+//    }
+//}
