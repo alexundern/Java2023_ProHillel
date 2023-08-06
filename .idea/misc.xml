@@ -14,7 +14,18 @@
         <option value="$PROJECT_DIR$/maven/hw_24/pom.xml" />
         <option value="$PROJECT_DIR$/maven/hw_23/pom.xml" />
         <option value="$PROJECT_DIR$/maven/hw_27/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/hw_28/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/hw_28.1/pom.xml" />
+        <option value="$PROJECT_DIR$/hw_28_ver.2/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/hw.28_ver.2/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/hw_28_ver.1/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/hw_28_ver.2/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/hw_28_ver.2/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="openjdk-20" project-jdk-type="JavaSDK">
