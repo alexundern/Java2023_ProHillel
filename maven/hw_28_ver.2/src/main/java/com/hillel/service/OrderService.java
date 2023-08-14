@@ -66,7 +66,6 @@ public class OrderService {
 
             order.setUpdateAt(new Timestamp(System.currentTimeMillis()));
 
-
             Product product = new Gson().fromJson(request.body(), Product.class);
             product.setUUID(UUID.randomUUID());
             order.getProducts().add(product);

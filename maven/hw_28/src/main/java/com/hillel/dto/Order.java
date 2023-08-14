@@ -1,23 +1,22 @@
 package com.hillel.dto;
 
+import java.util.Date;
+import java.util.List;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import lombok.experimental.Accessors;
 
 @Setter
 @Getter
+@Accessors(chain = true)
 @ToString
 public class Order {
-    private UUID uuid;
-    private Timestamp createAt;
-    private Timestamp updateAt;
-    private double cost;
-    private List<Product> products = new ArrayList<>();
+    private Integer id;
+    private Date date;
+    private Double cost;
+    private List<Product> products;
 
     public void setCost() {
         cost = 0D;

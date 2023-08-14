@@ -1,15 +1,14 @@
 package com.hillel.dto;
 
-import java.util.UUID;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
+import lombok.experimental.Accessors;
 
 @Getter
 @Setter
-@ToString
+@Accessors(chain = true)
 public class Product {
-    private UUID UUID;
+    private Integer id;
     private String name;
     private Double cost;
 }
