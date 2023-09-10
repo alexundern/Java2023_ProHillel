@@ -21,11 +21,15 @@
         <option value="$PROJECT_DIR$/maven/hw_28_ver.1/pom.xml" />
         <option value="$PROJECT_DIR$/maven/hw_28_ver.2/pom.xml" />
         <option value="$PROJECT_DIR$/maven/hw_29/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/hw_30/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/test_30/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/hw_28_ver.2/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/test/pom.xml" />
+        <option value="$PROJECT_DIR$/maven/test_30/pom.xml" />
       </set>
     </option>
   </component>

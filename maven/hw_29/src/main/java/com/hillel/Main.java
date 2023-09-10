@@ -15,16 +15,6 @@ import java.util.stream.Collectors;
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger("logger");
     public static void main(String[] args) {
-//        String projectRoot = System.getProperty("user.dir");
-//
-//        File logsDirectory = new File(projectRoot + File.separator + "logs");
-//        if (!logsDirectory.exists()) {
-//            boolean created = logsDirectory.mkdir();
-//            if (!created) {
-//                System.out.println("Не удалось создать директорию для логов.");
-//                return;
-//            }
-//        }
 
         CoffeeOrderBoard coffeeOrderBoard = new CoffeeOrderBoard();
         int clients = 15;
