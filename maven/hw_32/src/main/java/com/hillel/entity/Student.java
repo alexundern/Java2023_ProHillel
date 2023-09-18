@@ -1,17 +1,23 @@
 package com.hillel.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
+
+@Setter
+@Getter
 @Entity
-@Table( name = "STUDENT" )
+@Table(name = "STUDENT")
 public class Student {
     @Id
     @GeneratedValue( strategy = GenerationType.AUTO )
-    @Column( name = "id" )
+    @Column(name = "id")
     private Long id;
-    @Column( name = "NAME")
+    @Column(name = "name")
     private String name;
-    @Column( name = "EMAIL" )
+    @Column(name = "email")
     private String email;
 
     public Student() {
@@ -19,26 +25,6 @@ public class Student {
 
     public Student(String name, String email) {
         this.name = name;
-        this.email = email;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
         this.email = email;
     }
 

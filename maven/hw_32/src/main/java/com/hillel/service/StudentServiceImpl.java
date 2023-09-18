@@ -2,58 +2,62 @@ package com.hillel.service;
 
 import com.hillel.entity.Student;
 import com.hillel.entity.StudentService;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Service
 public class StudentServiceImpl implements StudentService {
 
     private final SessionFactory sessionFactory;
 
-    @Autowired
     public StudentServiceImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
     @Override
-    @Transactional
     public Long create(Student student) {
-        Session session = sessionFactory.getCurrentSession();
+        SessionFactory sessionFactory = HibernateSession.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
         Long id = (Long) session.save(student);
+        session.getTransaction().commit();
         return id;
     }
 
     @Override
-    @Transactional
     public void delete(Student student) {
-        Session session = sessionFactory.getCurrentSession();
+        SessionFactory sessionFactory = HibernateSession.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
         session.delete(student);
+        session.getTransaction().commit();
     }
 
     @Override
-    @Transactional
     public Student update(Student student) {
-        Session session = sessionFactory.getCurrentSession();
+        SessionFactory sessionFactory = HibernateSession.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
         session.update(student);
-        return student;
+        session.getTransaction().commit();
+        Long idUpdate = student.getId();
+        return get(idUpdate);
     }
 
     @Override
-    @Transactional
     public List<Student> getAll() {
-        Session session = sessionFactory.getCurrentSession();
-        return (List<Student>) session.createQuery("from Student");
+        SessionFactory sessionFactory = HibernateSession.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        Query query = session.createQuery("from Student");
+        return (List<Student>) query.list();
     }
 
     @Override
-    @Transactional
-    public Object get(Long id) {
-        Session session = sessionFactory.getCurrentSession();
-        return session.get(Student.class, id);
+    public Student get(Long id) {
+        SessionFactory sessionFactory = HibernateSession.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        return (Student) session.get(Student.class, id);
     }
 }

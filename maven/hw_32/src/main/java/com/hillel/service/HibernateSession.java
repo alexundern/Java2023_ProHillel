@@ -6,13 +6,6 @@ import org.hibernate.cfg.Configuration;
 public class HibernateSession implements AutoCloseable {
     private static final SessionFactory sessionFactory = createSessionFactory();
 
-    @Override
-    public void close() {
-        if (sessionFactory != null) {
-            sessionFactory.close();
-        }
-    }
-
     private static SessionFactory createSessionFactory() {
         try {
             return new Configuration().configure().buildSessionFactory();
@@ -24,4 +17,10 @@ public class HibernateSession implements AutoCloseable {
     public static SessionFactory getSessionFactory() {
         return sessionFactory;
     }
+
+    @Override
+    public void close(){
+        getSessionFactory().close();
+    }
+
 }

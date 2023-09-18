@@ -103,7 +103,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.hillel.Main</mainClass>
+                            <mainClass>com.hillel.com.hillel.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
