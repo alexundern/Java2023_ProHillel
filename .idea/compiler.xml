@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hw_23" />
+        <module name="hw_34" />
+        <module name="hw_33" />
+        <module name="hw_24" />
+        <module name="hw_27" />
+        <module name="hw_18" />
+        <module name="hw_29" />
+        <module name="hw_17" />
+        <module name="hw_28" />
+        <module name="hw_19" />
+        <module name="hw_28_ver.1" />
+        <module name="2" />
+        <module name="hw_30" />
+        <module name="hw_21" />
+        <module name="hw_32" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo_34" target="20" />
+      <module name="hw_33ver1" target="20" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo_34" options="-parameters" />
+      <module name="hw_34" options="-parameters" />
+    </option>
+  </component>
+</project>
