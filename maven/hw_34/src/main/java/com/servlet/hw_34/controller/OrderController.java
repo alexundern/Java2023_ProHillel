@@ -19,6 +19,9 @@ import java.util.List;
 @Slf4j
 public class OrderController {
     private final OrderRepository orderRepository;
+    private static final String GET_ORDER_BY_ID_LOG = "call method get from Order by Id...";
+    private static final String GET_ALL_ORDERS_LOG = "call method get all Orders...";
+    private static final String ADD_ORDER_LOG = "call method add order...";
 
     /**
      * Получить заказ по идентификатору.
@@ -28,7 +31,7 @@ public class OrderController {
      */
     @GetMapping("/{id}")
     public Order getOrderController(@PathVariable("id") Integer id) {
-        log.info("call method get from Order by Id...");
+        log.info(GET_ORDER_BY_ID_LOG);
         return orderRepository.getOrder(id);
     }
 
@@ -39,7 +42,7 @@ public class OrderController {
      */
     @GetMapping("/all")
     public List<Order> getAllOrdersController() {
-        log.info("call method get all Orders...");
+        log.info(GET_ALL_ORDERS_LOG);
         return orderRepository.getAllOrders();
     }
 
@@ -51,7 +54,7 @@ public class OrderController {
      */
     @PostMapping("")
     public boolean addOrderController(@RequestBody List<Product> products) {
-        log.info("call method add order...");
+        log.info(ADD_ORDER_LOG);
         products.forEach(product -> log.info("Add product: " + product.getName() + " " + product.getCost()));
         return orderRepository.addOrder(products);
     }

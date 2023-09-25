@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class PingController {
     private static final String CALL_ENDPOINT = "call endpoint : %s ";
-
+    private static final String PING_ENDPOINT = "ping";
     /**
      * Проверить доступность сервиса.
      *
@@ -24,7 +24,7 @@ public class PingController {
      */
     @GetMapping("/ping")
     public String ping() {
-        log.info(String.format(CALL_ENDPOINT, "ping"));
+        log.info(String.format(CALL_ENDPOINT, PING_ENDPOINT));
         return "OK";
     }
 }
