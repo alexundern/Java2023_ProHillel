@@ -23,6 +23,19 @@
         <module name="hw_21" />
         <module name="hw_32" />
       </profile>
+      <profile name="Annotation profile for hw_35" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.3.Final/mapstruct-processor-1.5.3.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.3.Final/mapstruct-1.5.3.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
+        </processorPath>
+        <module name="hw_36" />
+        <module name="hw_35" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo_34" target="20" />
@@ -33,6 +46,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo_34" options="-parameters" />
       <module name="hw_34" options="-parameters" />
+      <module name="hw_35" options="-parameters" />
+      <module name="hw_36" options="-parameters" />
     </option>
   </component>
 </project>

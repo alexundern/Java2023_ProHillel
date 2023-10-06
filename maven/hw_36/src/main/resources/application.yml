@@ -1,0 +1,35 @@
+# Spring application settings
+spring:
+  application:
+    name: spring.data
+
+# Server settings
+server:
+  port: 8080
+
+# Database settings
+spring:
+  datasource:
+    url: jdbc:url=jdbc:mysql://localhost:3306/springDB?useUnicode=true&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: Rootroot
+  jpa:
+    hibernate:
+#      ddl-auto: create
+      ddl-auto: update
+    show-sql: true # Set to false in production
+  h2:
+    console:
+      enabled: true # Enable H2 console for development (set to false in production)
+
+# Logging settings
+logging:
+  level:
+    root: INFO # Set to INFO or higher in production
+  file: # Define log file location if needed
+    path: /Hillel/Homeworks/hw_34/resources/logs
+    name: Application36.log
+
+# Swagger configuration (optional)
+swagger:
+  enabled: true # Enable Swagger API documentation
